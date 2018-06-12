@@ -39,3 +39,7 @@ print(m1.name)
 # print(MobilePhone.ram)
 # Object can access Class's Property
 # Class cannot access Object's Property
+
+name = ["John","Jennie"]
+if name[0].startswith("J"):
+    print("Wow")
