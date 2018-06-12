@@ -5,7 +5,7 @@ class Person:
         self.phone = phone
         self.age = age
         self.gender = gender
-        self.address = address # HAS-A Relation
+        self.address = address # HAS-A Relation | 1 to 1
         print("address is",address)
 
 
