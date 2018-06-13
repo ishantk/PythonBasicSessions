@@ -12,9 +12,6 @@ class MobilePhone:
         self.color = col
 
 
-
-
-
 # Write Operation
 # 1. Create an Attribute if its not thr
 # 2. Update the value if its thr
@@ -43,3 +40,32 @@ print(m1.name)
 name = ["John","Jennie"]
 if name[0].startswith("J"):
     print("Wow")
+
+print("********************")
+
+class Student:
+
+    name = "John"
+    age = 20
+
+    def __init__(self,roll, fname, lname, address):
+        self.roll = roll
+        self.fname = fname
+        self.lname = lname
+        self.address = address
+
+    def show(self):
+        print(self.roll,"belongs to",self.fname)
+
+    def show(self):
+        print(self.roll, "belongs to", self.fname,self.lname, "and lives in",self.address)
+
+
+
+print("Student Class Dict: ",Student.__dict__)
+
+s1 = Student(101,"Jennie","Watson","Redwood Shores")
+
+print("s1's Dict: ",s1.__dict__)
+#s1.show() # -> Student.show(s1) # Implicit Statement
+Student.show(s1)  # Explicit Statement
