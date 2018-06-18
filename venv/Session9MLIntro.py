@@ -46,3 +46,4 @@ lbl = clf.predict([[1000,100]])
 
 print("Prediction is",lbl)
 #print(type(lbl))
+

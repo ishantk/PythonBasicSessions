@@ -11,6 +11,15 @@ class MobilePhone:
         self.mem = mem
         self.color = col
 
+    @staticmethod
+    def fun():
+        print("Hello")
+
+
+m2 = MobilePhone("4 GB","128 GB","Black")
+#m2.fun() # Mobile.hello(m2)
+m2.fun()  # -> Mobile.fun()
+
 
 # Write Operation
 # 1. Create an Attribute if its not thr
@@ -27,7 +36,8 @@ print(MobilePhone.__dict__)
 m1 = MobilePhone("4 GB","128 GB","Black")
 
 m1.price = 60000
-
+m1.fun()
+MobilePhone.fun()
 
 #Ref Variable can access the property of class if it is not thr in the object
 print(m1.__dict__)
@@ -69,4 +79,5 @@ s1 = Student(101,"Jennie","Watson","Redwood Shores")
 print("s1's Dict: ",s1.__dict__)
 #s1.show() # -> Student.show(s1) # Implicit Statement
 Student.show(s1)  # Explicit Statement
+
 
