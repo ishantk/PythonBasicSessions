@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<employees>
+	<employee>
+		<eid>101</eid>
+		<name>George</name>
+		<salary>30000</salary>
+	</employee>
+	<employee>
+		<eid>201</eid>
+		<name>Fionna</name>
+		<salary>40000</salary>
+	</employee>
+	<employee>
+		<eid>301</eid>
+		<name>Leo</name>
+		<salary>45000</salary>
+	</employee>
+</employees>
