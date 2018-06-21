@@ -1,7 +1,16 @@
 import mysql.connector
-
-
 from tkinter import *
+
+def saveInDB(name, age, email, address):
+    sql = "insert into Student values(null,'{}',{},'{}','{}')".format(name, age, email, address)
+    con = mysql.connector.connect(user="root", password="", host="127.0.0.1", database="GW2018AI")
+    cursor = con.cursor()
+    cursor.execute(sql)
+    con.commit()
+    print(name, " Saved in DB")
+
+#saveInDB("Sia",30,"sia@example.com","Redwood Shores")
+
 
 def onClick():
     name = entryName.get()
@@ -10,7 +19,7 @@ def onClick():
     address = entryAddress.get()
 
     print("You Entered {}, {}, {}, {}".format(name,age,email,address))
-
+    saveInDB(name,age,email,address)
 
 # is a window i.e. a Frame which is visible as a UI
 root = Tk()
@@ -49,6 +58,7 @@ btnSubmit.pack()
 
 root.mainloop()
 
+
 class Student:
 
     def __init__(self, roll, name, age, email, address):
@@ -85,10 +95,10 @@ file.close()
 print("Data Saved")
 """
 
-con = mysql.connector.connect(user="root",password="",host="127.0.0.1",database="GW2018AI")
-print("Is Connection Established:",con.is_connected())
+#con = mysql.connector.connect(user="root",password="",host="127.0.0.1",database="GW2018AI")
+#print("Is Connection Established:",con.is_connected())
 #print(type(con))
-cursor = con.cursor()
+# cursor = con.cursor()
 #print(type(cursor))
 
 # sql1 = "insert into Student values(null,'Fionna',30,'fionna@example.com','Redwood Shores')"
@@ -100,22 +110,22 @@ cursor = con.cursor()
 # con.commit()
 # print("Student Saved !!")
 
-sql = "select * from Student"
-cursor.execute(sql)
+#sql = "select * from Student"
+#cursor.execute(sql)
 
 # row = cursor.fetchone()
 # print(row)
 # row = cursor.fetchone()
 # print(row)
 
-students = []
+"""students = []
 
 for row in cursor:
     print(row)
     s = Student(row[0],row[1],row[2],row[3],row[4])
     students.append(s)
 
-print(students)
+print(students)"""
 
 # Read row by row and convert every row into Student Object
 # And create a list of Student objects
