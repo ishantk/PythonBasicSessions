@@ -10,5 +10,4 @@ ttl.backward(200)
 ttl.right(200)
 ttl.backward(200)
 
-
 turtle.done()
