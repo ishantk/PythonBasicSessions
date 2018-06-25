@@ -47,3 +47,5 @@ print(sdf.head(2))
 
 print("Max Number of Students:",df["Students"].max())
 
+plot.plot(df["Streams"],df["Students"])
+plot.show()
