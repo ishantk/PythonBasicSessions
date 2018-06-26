@@ -27,7 +27,7 @@ print("DataFrame written to File")
 
 #df = pd.read_csv("studentsData.csv")
 # df = pd.read_csv("studentsData.csv",header=None)
-df = pd.read_csv("studentsData.csv",names=["Streams","Students"])
+"""df = pd.read_csv("studentsData.csv",names=["Streams","Students"])
 print(df)
 
 print(df.dtypes)
@@ -48,4 +48,11 @@ print(sdf.head(2))
 print("Max Number of Students:",df["Students"].max())
 
 plot.plot(df["Streams"],df["Students"])
+plot.title('Data')
+plot.ylabel('Students')
+plot.xlabel('Streams')
 plot.show()
+"""
+
+df = pd.read_csv("datafile.csv",header=None,names=["SrNo","Cases Reported"])
+print(df)
