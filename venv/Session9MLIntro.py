@@ -1,5 +1,3 @@
-from sklearn import tree
-
 """
 	Intro to Machine Learning
 
@@ -34,6 +32,7 @@ from sklearn import tree
 			scikit-learn
 
 """
+from sklearn import tree
 
 data = [[100,70],[120,90],[150,100],[800,1000],[1000,1100],[1200,1200]]
 output = [0, 0, 0, 1, 1, 1]
